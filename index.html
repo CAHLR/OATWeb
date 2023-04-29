@@ -17,14 +17,10 @@
 		header {
           text-align: center;
 		  position: fixed;
-		  top: -60px;
+		  top: 0px;
 		  width: 100%;
-		  transition: top 0.3s;
 		}
 
-		header.visible {
-		  top: 0;
-		}
         nav {
             background-color: #3f51b5;
             color: #fff;
@@ -61,6 +57,45 @@
         nav a:hover {
             border-bottom: 2px solid #fff;
         }
+		.dropdown {
+  			position: relative;
+  			display: inline-block;
+			border: none;
+			background-color: #3f51b5
+		}
+		.dropbtn {
+			background-color: #3f51b5;
+			color: white;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+			font-family: 'Titillium Web', sans-serif;
+			font-size: 75%;
+			font-weight: bold;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			}
+
+		.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #3f51b5; /* set the background color to match the nav bar */
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+		}
+
+	.dropdown-content a {
+	color: #fff; /* set the text color to white */
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 		h1, h3 {
 			text-align: center;
@@ -121,8 +156,13 @@
         <nav>
 	        <a href="teachers.html">For Teachers</a>
 	        <a href="researchers.html">For Researchers</a>
-	        <a href="aied.html">AIED</a>
-	        <a href="las.html">L@S</a>
+			<div class="dropdown">
+				<button class="dropbtn">Upcoming Workshops</button>
+				<div class="dropdown-content">
+					<a href="aied.html">AIED</a>
+					<a href="las.html">L@S</a>
+				</div>
+			</div>
 	        <a href="https://github.com/CAHLR/OATutor">
 	            <img src="assets/fork.jpg" alt="Fork me on GitHub" width="25", height="25">
 	        </a>
@@ -139,16 +179,6 @@
     </div>
     
 	<script>
-		var prevScrollpos = window.pageYOffset;
-		window.onscroll = function() {
-			var currentScrollPos = window.pageYOffset;
-			if (prevScrollpos > currentScrollPos) {
-				document.getElementById("header").classList.add("visible");
-			} else {
-				document.getElementById("header").classList.remove("visible");
-			}
-			prevScrollpos = currentScrollPos;
-		}
 	</script>
 </body>
 </html>
