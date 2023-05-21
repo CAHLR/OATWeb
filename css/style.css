@@ -231,7 +231,7 @@ p {
 }
 
 a {
-    color: #4c4c4c;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -341,7 +341,7 @@ a {
     text-decoration: none;
     display: block;
     text-align: left;
-    color: #4c4c4c;
+    color: #fff;
     text-decoration: none;
     margin: 0 20px;
     font-size: 75%;
